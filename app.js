@@ -67,7 +67,7 @@ const accessLogStream = fs.createWriteStream(
 );
 
 app.use(helmet());
-app.use(compression());
+// app.use(compression());
 app.use(morgan('combined', { stream: accessLogStream }));
 
 app.use(bodyParser.urlencoded({ extended: false }));
